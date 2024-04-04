@@ -1,4 +1,4 @@
-# **To-Do List Application**
+# **Contact Management System**
 
 *The Contact Management System is designed to help users add and manage their contacts.*   
 *The purpose of the application is to help users access and organize their contacts efficiently.*
