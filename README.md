@@ -78,6 +78,9 @@ Please enter the name of the contact you are searching for:
 Here are your current contacts:
 (contacts will display here)
 ```
+<br />
+<br />
+
 **6. Export contacts to a text file** *This function will allow the user to export their contact and a new text file containing them will be created.*
 
 ## Invalid Input
@@ -94,5 +97,5 @@ Invalid Input.. Try again! ༼ つ ◕_◕ ༽つ
 
 **This application was a group effort created by:**     
 
-*Chris Fletcher* https://github.com/Hiyuhh   
+*Chris Fletcher* https://github.com/   
 *Savannah Lyles* https://github.com/Savvy325
