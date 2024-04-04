@@ -48,7 +48,7 @@ Which contact would you like to edit?:
 ```
 What would you like to edit? {name, address, email}:
 ```
-*When the user is finished they can either edit another contact or choose not to and go back to the menu list:
+When the user is finished they can either edit another contact or choose not to and go back to the menu list:
 ```
 would you like to edit another contact? (y/n):
 "y" will prompt them to enter the contact they would like to edit
@@ -70,6 +70,9 @@ Who would you like to delete from your list?:
 Please enter the name of the contact you are searching for:
 ```
 *After the user enters the contacts name, the contacts information will then be displayed:*
+```
+John Doe lives at 123 main, Email: johndoe@yahoo.com
+```
 <br />
 <br />
 
