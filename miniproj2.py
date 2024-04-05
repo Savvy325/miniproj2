@@ -16,7 +16,6 @@ def cli(): # Command Line Interface
         4. Search for a contact
         5. Display all contacts
         6. Export contacts to a text file
-        7. Quit
                         
         """)
         try:
@@ -40,16 +39,16 @@ def cli(): # Command Line Interface
         except (ValueError, OverflowError): # Error Handling when the user inputs a string or overflow 
             print("\n\n\nInvalid input.. Try again! ༼ つ ◕_◕ ༽つ")         
 
-def add_contact():
-    name = input("\nWhat is the contacts name?(back) ")
-    address = input("\nEnter contacts address:(back) ")
+def add_contact(): # This function is used to add a contact
+    name = input("\nWhat is the contacts name?: ")
+    address = input("\nEnter contacts address: ")
     email = ""
 
     if name == "back" or address == "back" or email == "back":
         cli()
     else:
         while True:
-            email = input("\nWhat is your contacts email address? (back) ")
+            email = input("\nWhat is your contacts email address?: ")
             valid_email = re.search(r'[A-Za-z0-9.%+-]+@[A-Za-z0-9.-]+.[A-z]{2,}', email)
             if valid_email:
                 break
@@ -69,9 +68,10 @@ def edit_contact():
         for k, v in contacts.items():
             if v[0] == user_input:
                 key = k
-            else:
-                print(f"{user_input} does not exist")
-                return
+                break
+        else:
+            print(f"{user_input} does not exist")
+            return
         edit = input("\nWhat would you like to edit? {name, address, email}: ")
         if edit == "name":
             name = input("what is the new name?: ")
@@ -102,9 +102,10 @@ def delete_contact():
         return k
     except Exception as e:
         print(f"There was an error at: {e}")
+    
 
 def search_contact():
-    user_input = input(f'Who would you like to search for from your contact list? : ')
+    user_input = input(f'Please enter the name of the contact you are searching for: ')
     try:
         for k, v in contacts.items():
             if v[0] == user_input:
