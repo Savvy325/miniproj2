@@ -43,11 +43,7 @@ def add_contact(): # This function is used to add a contact
     name = input("\nWhat is the contacts name?: ")
     address = input("\nEnter contacts address: ")
     email = ""
-
-    if name == "back" or address == "back" or email == "back":
-        cli()
-    else:
-        while True:
+    while True:
             email = input("\nWhat is your contacts email address?: ")
             valid_email = re.search(r'[A-Za-z0-9.%+-]+@[A-Za-z0-9.-]+.[A-z]{2,}', email)
             if valid_email:
