@@ -62,7 +62,7 @@ def add_contact(): # This function is used to add a contact
     if another_contact == "y":
         add_contact()
 
-def edit_contact():
+def edit_contact(): #This function is to edit a contact
     user_input = input("\nWhich contact would you like to edit?: ")
     try:
         for k, v in contacts.items():
@@ -91,7 +91,7 @@ def edit_contact():
         edit_contact()
 print(contacts)    
 
-def delete_contact():
+def delete_contact(): #This function is to delete a contact
     user_input = input(f"Who would you like to delete from your list?: ")
     try:
         for k, v in contacts.items():
@@ -104,7 +104,7 @@ def delete_contact():
         print(f"There was an error at: {e}")
     
 
-def search_contact():
+def search_contact(): #This function is to search a contact
     user_input = input(f'Please enter the name of the contact you are searching for: ')
     try:
         for k, v in contacts.items():
@@ -115,12 +115,12 @@ def search_contact():
     except Exception as e:
         print(f'There was an error at: {e}')
 
-def display_contact():
+def display_contact(): #This function will display all contacts
     print("\nHere are your current contacts")
     for k, v in contacts.items():
         print(f"\n{v[0]} lives at {v[1]}, Email: {k}")
 
-def export_contact():
+def export_contact(): #This function will export the contact list to a separate .txt file
     with open("contacts.txt", "w") as file:
         for k, v in contacts.items():
             name = v[0]
